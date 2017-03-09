@@ -1,10 +1,10 @@
 ﻿(function(){
 	var app = angular.module('myApp',['smart-table']);
 	
-	app.directive("tableForm", function(){
+	app.directive("tmsTable", function(){
 		return{
 			restrict: 'E',
-			templateUrl: "table-form.html"
+			templateUrl: "tms-table.html"
 		};
 	});
 	
@@ -28,26 +28,7 @@
 		];
 		
 		$scope.itemsPerPage = 5;
-		
-		$scope.newRow = {firstname: "", lastname: "", birthday: '', eyeColor: "", hairColor: ""};
 			
-		$scope.rowSubmit = function(fname,lname,bday,ecolor,hcolor){
-		
-			 var clearForm = angular.copy(clearForm);			
-			
-			$scope.newRow = {firstname: fname, lastname: lname, birthday: new Date(bday) , eyeColor: ecolor, hairColor: hcolor}
-			$scope.tableRows.push($scope.newRow);
-			$scope.newRow = angular.copy(clearForm);
-			$scope.newRow = {firstname: "", lastname: "", birthday: '' , eyeColor: "", hairColor: ""};
-		};
-		
-		$scope.removeRow = function removeRow(row) {
-			var index = $scope.tableRows.indexOf(row);
-			if (index > -1) {
-				$scope.tableRows.splice(index, 1);
-			}
-		};
-		
 		});
 	
 	
