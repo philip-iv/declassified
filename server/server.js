@@ -25,7 +25,7 @@ app.listen(8080, '0.0.0.0', function() {
 
 app.get('/all', function(req, res){
     con.query('\
-    SELECT * FROM classes \
+    SELECT code, classes.name, section, professor, crn, rating, tags FROM classes \
     INNER JOIN professors \
     WHERE classes.professor = professors.name \
     ORDER BY rating, professors.name \
