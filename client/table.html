@@ -15,35 +15,7 @@
 	<body ng-controller="dataController as data">
 		
 		<img src="classified.png"/>
-		<table st-table="tableRows" class="table table-striped">
-			<thead>
-				<tr>
-					<th class="empty-header"><input st-search st-delay="100" placeholder="global..." class="input-sm form-control" type="search" /></th>
-					<th st-sort="professor" st-skip-natural="true">Professor</th>
-					<th st-sort="rating" st-skip-natural="true">Rating</th>
-					<th st-sort="tags" st-skip-natural="true">Top Tags</th>
-					<th st-sort="course" st-skip-natural="true">Course Number</th>
-					<th st-sort="crn" st-skip-natural="true">CRN</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ng-repeat="row in tableRows">
-				<td></td>
-				<td>{{row.professor}}</td>
-				<td>{{row.rating}}</td>
-				<td>{{row.tags}}</td>
-				<td>{{row.course}}</td>
-				<td>{{row.crn}}</td>
-				</tr>
-			</tbody>
-			<tfoot>
-				<tr>
-					<td>
-						<div st-pagination="" st-items-by-page="itemsPerPage" st-displayed-pages="5"></div>
-					</td>
-				</tr>
-		</tfoot>
-		</table>
+			<tms-table></tms-table>
 		<br>
 	</body>
 </html>
