@@ -1,0 +1,51 @@
+th{ 
+	cursor: pointer; cursor: hand; 
+}
+table{
+	border: 1px double white;
+	width: 100%;
+}
+td, th{
+	padding: 10px;
+	text-align: left;
+	font-size: 20px;
+}
+
+tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+tr:nth-child(odd){
+	background-color:white;
+}
+
+th{
+	color: white;
+	height: 50px;
+	background-color:rgb(124, 208, 185);
+}
+	
+body{
+	background-image: url("background.JPG");
+	background-size: cover;
+}
+h1{
+	text-align: center;
+	color: White;
+	font-family: verdana;
+	font-size: 480%;
+	font-weight : bold;
+}
+
+.pagination >li.active>a{
+	background-color: rgb(124, 208, 185);
+	color: white;
+	border-color: rgb(124, 208, 185);
+}
+.pagination >li>a{
+	color: rgb(124, 208, 185);
+}
+::-moz-selection{
+	color: red;
+	background: yellow;
+}

@@ -1,21 +1,29 @@
-<html>
-	<head>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<title>DeClassified</title>
-		<style>
-			tr{ 
-				cursor: pointer; cursor: hand; 
-			}
-			body{
-				background-color: linear-gradient(red, yellow);
-			}
-		</style>
+<html ng-app="myApp">
+	<head>		
+		<title>Declassified</title>
+		
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+		<link rel="stylesheet" href="style.css"/>
+
+		<!--
+		<link rel="stylesheet" type="text/css" href="bootstrap-material-design.min.css" /> 
+		-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+		<script src="smart-table.min.js"></script>
+		<script src="table.js"></script>
+		
 	</head>
-	<body>
+	<body ng-controller="dataController as data">
 		<!--Logo for Declassified-->
-		
+		<br>
+		<br>
+		<h1>Declassified</h1>
 		<!-- drop down list to choose the number of rows to display per page-->
-		
+		<br>
+		<br>
+		<br>
 		<!--Include the table from abother file-->
+		<tms-table></tms-table>
+
 	</body>
 </html>
