@@ -36,16 +36,39 @@ h1{
 	font-size: 480%;
 	font-weight : bold;
 }
-
-.pagination >li.active>a{
+.pagination >li.active>a,
+.pagination >li.active>a:hover,
+.pagination >li.active>a:focus{
 	background-color: rgb(124, 208, 185);
 	color: white;
 	border-color: rgb(124, 208, 185);
 }
 .pagination >li>a{
 	color: rgb(124, 208, 185);
+	border-color: white;
 }
-::-moz-selection{
-	color: red;
-	background: yellow;
+.pagination >li>a:hover, 
+.pagination> li > span:hover,
+.pagination> li > span:focus,
+.pagination >li>a:focus{
+	color: rgb(124, 208, 185);
 }
+
+select{
+	width: 160px;
+	height: 30px;
+	margin-left: 1300px;
+	margin-top: 15px;
+	margin-bottom: 0px;
+	text-align: center;
+	font-family: verdana;
+	font-size: 100%;
+	font-weight : bold;
+	color: rgb(124, 208, 185);
+}
+
+select option:hover,
+select option:checked{
+	box-shadow: 0 0 10px 100px rgb(81, 179, 164) inset;
+}
+
