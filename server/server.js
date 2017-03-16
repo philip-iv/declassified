@@ -18,7 +18,7 @@ con.connect(function(err) {
     }
 });
 
-app.use(express.static("."));
+app.use(express.static(__dirname + "/../client"));
 app.listen(8080, '0.0.0.0', function() {
   console.log("Server running");
 });
