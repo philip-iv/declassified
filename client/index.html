@@ -1,0 +1,35 @@
+<html ng-app="myApp">
+	<head>		
+		<title>Declassified</title>
+		
+		<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+		<link rel="stylesheet" href="style.css"/>
+
+		<!--
+		<link rel="stylesheet" type="text/css" href="bootstrap-material-design.min.css" /> 
+		-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+		<script src="smart-table.min.js"></script>
+		<script src="table.js"></script>
+		
+	</head>
+	<body ng-controller="dataController as data">
+		<!--Logo for Declassified-->
+		<br>
+		<br>
+		<h1>Declassified</h1>
+		<!-- drop down list to choose the number of rows to display per page-->
+		<select name = "numDisplay" id="numDisplay">
+		<option value="10" selected="selected">View 10</option>
+		<option value="20">View 20</option>
+		<option value="50" >View 50</option>
+		<option value="100">View 100</option>
+		</select>
+		<br>
+		<br>
+		<br>
+		<!--Include the table from abother file-->
+		<tms-table></tms-table>
+
+	</body>
+</html>
