@@ -9,6 +9,14 @@
 	});
 	
 	app.controller('dataController', function($scope){
+		$scope.tableRows = [];
+		$scope.datalod = false;
+		$http.get(url, { cache: true}).success(function(dataFromServer) {
+			// set tableRows
+			// do any preprocesing
+			$scope.dataLoaded = true;
+			$scope.tableRows = dataFromServer.data;
+		});
 		$scope.tableRows = [
 			{"professor": "Augenblick", "rating": 4.8, "tags": "Helpful, Friendly", "course": "CS275", "crn": 12356},
 			{"professor": "Augenblick", "rating": 4.8, "tags": "Helpful, Friendly", "course": "CS265", "crn": 15366},
