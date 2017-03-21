@@ -27,8 +27,9 @@ app.get('/all', function(req, res){
     con.query('\
     SELECT code, classes.name, section, professor, crn, rating, tags FROM classes \
     INNER JOIN professors \
-    WHERE classes.professor = professors.name \
-    ORDER BY rating, professors.name \
+    WHERE classes.professor = professors.name AND \
+    professors.rating > 0 \
+    ORDER BY professors.rating DESC, professors.name ASC\
     ;\
     ', function(err, rows, fields) {
         if (err)
