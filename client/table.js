@@ -8,10 +8,10 @@
 		};
 	});
 	
-	app.controller('dataController', function($scope){
+	app.controller('dataController', function($scope, $http){
 		$scope.tableRows = [];
-		$scope.datalod = false;
-		$http.get(url, { cache: true}).success(function(dataFromServer) {
+		$scope.dataLoaded = false;
+		$http.get('/all', { cache: true}).success(function(dataFromServer) {
 			// set tableRows
 			$scope.tableRows = dataFromServer;
 			// do any preprocesing
