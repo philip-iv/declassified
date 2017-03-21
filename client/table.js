@@ -9,7 +9,16 @@
 	});
 	
 	app.controller('dataController', function($scope){
-		$scope.tableRows = [
+		$scope.tableRows = [];
+		$scope.datalod = false;
+		$http.get(url, { cache: true}).success(function(dataFromServer) {
+			// set tableRows
+			$scope.tableRows = dataFromServer;
+			// do any preprocesing
+			$scope.dataLoaded = true;
+			//$scope.tableRows = dataFromServer.data;
+		});
+/* 		$scope.tableRows = [
 			{"professor": "Augenblick", "rating": 4.8, "tags": "Helpful, Friendly", "course": "CS275", "crn": 12356},
 			{"professor": "Augenblick", "rating": 4.8, "tags": "Helpful, Friendly", "course": "CS265", "crn": 15366},
 			{"professor": "Katsinis", "rating": 3.8, "tags": "Intelligent, Challenging, Cool, Greek ,Friendly", "course": "CS281", "crn": 19856},
@@ -21,11 +30,7 @@
 			{"professor": "Liechty", "rating": 4.2, "tags": "Easy, Dry,  Boring ", "course": "STAT201", "crn": 65844},
 			{"professor": "Schmidt", "rating": 3.4, "tags": "Structured, Strict", "course": "CS265", "crn": 95722},
 			{"professor": "Schmidt", "rating": 3.4, "tags": "Structured, Strict,  ", "course": "CS265", "crn": 95722},
-			
-			
-
-			
-		];
+		]; */
 		
 		$scope.itemsPerPage = 5;
 			
